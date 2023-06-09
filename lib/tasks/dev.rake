@@ -1,11 +1,11 @@
 namespace :dev do
   desc "Configura o ambiente de desenvolvimento"
-  task steup: :environment do
+  task setup: :environment do
     if Rails.env.development?
       show_spinner("Apagando Banco de Dados..." ) {%x(rails db:drop)}
       show_spinner("Criando banco de dados...") {%x(rails db:create)}
       show_spinner("Migrando as tabelas...") {%x(rails db:migrate)}
-      show_spinner("Inserindo informações no banco...") {%x(railsdb:seed)}
+      show_spinner("Inserindo informações no banco...") {%x(rails db:seed)}
     else
       puts "Para executar a task você precisa está em modo de desenvolvimento"  
   end

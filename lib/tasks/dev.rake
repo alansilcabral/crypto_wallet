@@ -5,8 +5,8 @@ namespace :dev do
       show_spinner("Apagando Banco de Dados..." ) {%x(rails db:drop)}
       show_spinner("Criando banco de dados...") {%x(rails db:create)}
       show_spinner("Migrando as tabelas...") {%x(rails db:migrate)}
-      %x(rails dev:add_coins) #chamando a task add coins
       %x(rails dev:add_mining_types) #chamando a task mining types
+      %x(rails dev:add_coins) #chamando a task add coins
     else
       puts "Para executar a task você precisa está em modo de desenvolvimento"  
   end
@@ -19,31 +19,36 @@ task add_coins: :environment do
       {
         description: "Bitcon",
         acronym: "BTC",
-        url_image: "https://static.vecteezy.com/system/resources/thumbnails/008/505/801/small_2x/bitcoin-logo-color-illustration-png.png"
+        url_image: "https://static.vecteezy.com/system/resources/thumbnails/008/505/801/small_2x/bitcoin-logo-color-illustration-png.png",
+        mining_type: MiningType.find_by(acronym: 'PoW')
       },
 
       {
         description: "Ethereum",
         acronym: "ETC",
-        url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+        url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
+        mining_type: MiningType.all.sample
       },
 
       {
         description: "Dash",
         acronym: "DASH",
-        url_image: "https://cryptologos.cc/logos/dash-dash-logo.png"
+        url_image: "https://cryptologos.cc/logos/dash-dash-logo.png",
+        mining_type: MiningType.all.sample
       },
 
       {
         description: "Iota",
         acronym: "IOT",
-        url_image: "https://cryptologos.cc/logos/iota-miota-logo.png"
+        url_image: "https://cryptologos.cc/logos/iota-miota-logo.png",
+        mining_type: MiningType.all.sample
       },
 
       {
         description: "ZCash",
         acronym: "ZCash",
-        url_image: "https://cryptologos.cc/logos/zcash-zec-logo.png"
+        url_image: "https://cryptologos.cc/logos/zcash-zec-logo.png",
+        mining_type: MiningType.all.sample
       }
 
     ]

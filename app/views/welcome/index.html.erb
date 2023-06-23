@@ -1,4 +1,6 @@
 <h1>Seja Bem-Vindo, <%= @nome %>!</h1>
+<p><%= link_to 'Portuguese', root_path(locale:'pt-BR') %><p>
+<p><%= link_to 'English', root_path(locale:'en') %><p>
 <p><strong>Data:</strong> <%= l(Date.today) %></p>
 
 <%= render "menu" %>

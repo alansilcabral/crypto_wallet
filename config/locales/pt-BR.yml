@@ -1,5 +1,9 @@
 pt-BR:
   hello: "Olá Mundo"
+  welcome: "Seja Bem-Vindo(a)"
+  messages:
+    welcome: "O Crypto Wallet é um app gerenciador de criptomoedas."
+    menu: "Selecione o módulo que deseja acessar:"
   links:
     edit: "Editar"
     show: "Mostrar"

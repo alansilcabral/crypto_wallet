@@ -8,5 +8,14 @@ en:
     edit: "Edit"
     show: "Show"
     delete: "Delete"
-    Are you sure: "Are you sure?"
-    new: "new"
+    new: "New"
+    back: "Back"
+    new_coin: "New Coin"
+    coin: 
+    new_mining_type: "New Mining Type"
+    editing:
+    coin: "Editing Coin"
+    mining_type: "Editing Mining Type"
+    showing:
+    coin: "Showing Coin"
+    mining_type: "Showing Mining Type"
